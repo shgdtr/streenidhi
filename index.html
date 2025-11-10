@@ -1,91 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-  <title>Streenidhi Repayment</title>
-
+  <title>Streenidhi Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* ===== Make Page Fully Responsive & Mobile Friendly ===== */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      width: 100%;
-      overflow: hidden;              /* Prevent scrollbars */
-      background-color: #000;        /* Black background for loading/transition */
-      -webkit-touch-callout: none;   /* Prevent long-press menu on iOS */
-      -webkit-user-select: none;     /* Disable text selection */
-      user-select: none;
+      overflow: hidden;
     }
-
     iframe {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
       border: none;
-      outline: none;
-      background-color: #fff;
-      display: block;
-    }
-
-    /* ===== Optional Loader for Slow Connections ===== */
-    #loader {
-      position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-      background: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 18px;
-      color: #333;
-      font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-      iframe {
-        height: 100vh; /* Ensure fits phone screens exactly */
-      }
-      #loader {
-        font-size: 16px;
-      }
     }
   </style>
 </head>
-
 <body>
-  <!-- Simple Loader for Better UX -->
-  <div id="loader">Loading Streenidhi Repayment...</div>
-
-  <iframe
-    id="repayFrame"
-    src="https://script.google.com/macros/s/AKfycbyijiEzTQr-gFxChSf-UEqjgoWhurOaRLu7VRuoO8Xt3dVaRhviyvj0Dg1q6gxQdY4nQA/exec"
-    allowfullscreen="true">
-  </iframe>
-
-  <script>
-    const iframe = document.getElementById("repayFrame");
-    const loader = document.getElementById("loader");
-
-    // Hide loader once iframe finishes loading
-    iframe.onload = function () {
-      loader.style.display = "none";
-    };
-
-    // Attempt fullscreen (won’t auto-trigger on mobile due to permissions)
-    window.addEventListener("load", () => {
-      if (iframe.requestFullscreen) {
-        iframe.requestFullscreen().catch(() => {
-          // Fullscreen might require user interaction on mobile
-        });
-      }
-    });
-  </script>
+  <!-- ✅ Embed your Google Apps Script web app here -->
+  <iframe src="https://script.google.com/macros/s/AKfycbyijiEzTQr-gFxChSf-UEqjgoWhurOaRLu7VRuoO8Xt3dVaRhviyvj0Dg1q6gxQdY4nQA/exec>
 </body>
 </html>
 
